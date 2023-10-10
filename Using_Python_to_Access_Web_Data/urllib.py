@@ -4,11 +4,11 @@ fhand = urllib.request.urlopen('http://data.pr4e.org/romeo.txt')
 
 counts = dict()
 for line in fhand:
-    words = line.decode().strip()
+    words = line.decode().split()
     for word in words:
         counts[word] = counts.get(word, 0) + 1
 
 print(counts)
 
-# {'B': 1, 'u': 6, 't': 12, ' ': 29, 's': 11, 'o': 8, 'f': 3, 'w': 4, 'h': 9, 'a': 10, 'l': 6, 'i': 13, 'g': 3, 'r': 7, 'y': 2, 'n': 9, 'd': 6, 'e': 12, 'b': 1, 'k': 3, 'I': 1, 'J': 1, 'A': 1, 'v': 1, 'm': 1, 'W': 1, 'c': 1, 'p': 1}
+#{'But': 1, 'soft': 1, 'what': 1, 'light': 1, 'through': 1, 'yonder': 1, 'window': 1, 'breaks': 1, 'It': 1, 'is': 3, 'the': 3, 'east': 1, 'and': 3, 'Juliet': 1, 'sun': 2, 'Arise': 1, 'fair': 1, 'kill': 1, 'envious': 1, 'moon': 1, 'Who': 1, 'already': 1, 'sick': 1, 'pale': 1, 'with': 1, 'grief': 1}
 
