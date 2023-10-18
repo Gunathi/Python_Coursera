@@ -9,7 +9,7 @@ data = '''<person>
 
 tree = ET.fromstring(data)
 print("Name: ",tree.find('name').text)
-print("Attr: ",tree.get("hide"))
+print("Attr: ",tree.find('email').get("hide"))
 
 #Second Example
 input = '''<stuff>
